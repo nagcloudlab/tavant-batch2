@@ -10,8 +10,8 @@ public class Application {
     public static void main(String[] args) {
 
         // init / boot phase
-        ConfigurableApplicationContext applicationContext=null;
-        applicationContext=new AnnotationConfigApplicationContext(TransferServiceConfiguration.class);
+        ConfigurableApplicationContext applicationContext=
+        new AnnotationConfigApplicationContext(TransferServiceConfiguration.class);
 
         // use phase
         TransferService transferService=applicationContext.getBean("txrService",TransferService.class);
@@ -20,7 +20,6 @@ public class Application {
         transferService.transfer(1000.00, "2", "1");
 
          // destroy phase
-        transferService = null;
 
 
 
