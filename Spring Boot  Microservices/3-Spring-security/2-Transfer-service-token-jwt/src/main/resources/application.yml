@@ -1,0 +1,24 @@
+debug: false
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/testdb
+    username: root
+    password: Root$1212
+
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration
+
+  dao:
+    exceptiontranslation:
+      enabled: false
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+
+training:
+  tavant: true
+
+
